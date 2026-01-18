@@ -15,8 +15,9 @@ from livekit.agents import AgentServer, AgentSession, Agent, room_io
 from livekit.plugins import silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
-# Load environment variables
+# Load environment variables (prefer .env.local, fallback to .env)
 load_dotenv(".env.local")
+load_dotenv()
 
 DEFAULT_STT_MODEL = "assemblyai/universal-streaming:en"
 DEFAULT_LLM_MODEL = "openai/gpt-4.1-mini"
