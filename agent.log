@@ -1,0 +1,414 @@
+nohup: ignoring input
+    21:13:34.457 DEBUG  asyncio            Using selector: EpollSelector  
+    21:13:34.460 DEV    livekit.agents     Watching                             
+                                           /home/ubuntu/wukong-voice-agent      
+    21:13:36.662 DEBUG  asyncio            Using selector: EpollSelector  
+    21:13:36.672 INFO   livekit.agents     starting worker  
+                                         {"version": "1.3.11", "rtc-version": 
+"1.0.23"}
+    21:13:36.673 INFO   livekit.agents     preloading plugins  
+                                         {"packages": ["livekit.plugins.silero",
+"livekit.plugins.turn_detector", "av"]}
+    21:13:36.675 INFO   livekit.agents     starting inference executor  
+    21:13:38.947 INFO   livekit.agents     initializing process  
+                                         {"pid": 30089, "inference": true}
+    21:13:41.747 INFO   livekit.agents     process initialized  
+                                         {"pid": 30089, "inference": true, 
+"elapsed_time": 2.8}
+    21:13:41.750 INFO   livekit.agents     HTTP server listening on :40031  
+    21:13:45.740 INFO   livekit.agents     registered worker  
+                                         {"agent_name": "", "id": 
+"AW_iUc9tcC49NpF", "url": "wss://wukong-ai-0w0oasmq.livekit.cloud", "region": 
+"US Central", "protocol": 16}
+    21:14:50.938 INFO   livekit.agents     received job request  
+                                         {"job_id": "AJ_AnnJL6KfaBbq", 
+"dispatch_id": "AD_M8fNmnpHTjC2", "room": "deepseek-mla-tutor", "room_id": 
+"RM_h4A5LutjWctJ", "agent_name": "", "resuming": false, "enable_recording": 
+false}
+    21:14:51.734 DEBUG  livekit.agents     received assignment  
+                                         {"agent_name": "", "room_id": 
+"RM_h4A5LutjWctJ", "room": "deepseek-mla-tutor", "job_id": "AJ_AnnJL6KfaBbq", 
+"dispatch_id": "AD_M8fNmnpHTjC2", "enable_recording": false}
+    21:14:51.744 INFO   livekit.agents     initializing process {"pid": 30211}
+    21:14:51.776 INFO   livekit.agents     process initialized  
+                                         {"pid": 30211, "elapsed_time": 0.03}
+    21:14:51.777 DEBUG  asyncio            Using selector: EpollSelector  
+                                  {"pid": 30211, "job_id": "AJ_AnnJL6KfaBbq", 
+"room_id": "RM_h4A5LutjWctJ"}
+    21:14:52.446 DEBUG  livekit.agents     input stream attached  
+                                         {"participant": null, "source": 
+"SOURCE_UNKNOWN", "accepted_sources": ["SOURCE_MICROPHONE"], "pid": 30211, 
+"job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:14:52.467 DEBUG  livekit.agents     http_session(): creating a new       
+                                           httpclient ctx                       
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:14:55.999 DEBUG  livekit.agents     using audio io: `RoomIO` ->          
+                                           `AgentSession` ->                    
+                                           `TranscriptSynchronizer` ->          
+                                           `RoomIO`                             
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+                 DEBUG  livekit.agents     using transcript io: `AgentSession`  
+                                           -> `TranscriptSynchronizer` ->       
+                                           `RoomIO`                             
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:16:53.378 ERROR  livekit.agents     Error in recv_task                   
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:16:53.381 WARNI… livekit.agents     failed to recognize speech,          
+                                           retrying in 0.1s                     
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 317, in _main_task              
+                                               return await self._run()         
+                                                      ^^^^^^^^^^^^^^^^^         
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 504, in _run                    
+                                               task.result()                    
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"tts": 
+"livekit.agents.inference.stt.STT", "attempt": 0, "streamed": true, "pid": 
+30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/stt/stt.py", line
+317, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+504, in _run
+    task.result()
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:18:54.646 ERROR  livekit.agents     Error in recv_task                   
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:18:54.647 WARNI… livekit.agents     failed to recognize speech,          
+                                           retrying in 2.0s                     
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 317, in _main_task              
+                                               return await self._run()         
+                                                      ^^^^^^^^^^^^^^^^^         
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 504, in _run                    
+                                               task.result()                    
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"tts": 
+"livekit.agents.inference.stt.STT", "attempt": 1, "streamed": true, "pid": 
+30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/stt/stt.py", line
+317, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+504, in _run
+    task.result()
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:21:00.910 ERROR  livekit.agents     Error in recv_task                   
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:21:00.911 WARNI… livekit.agents     failed to recognize speech,          
+                                           retrying in 2.0s                     
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 317, in _main_task              
+                                               return await self._run()         
+                                                      ^^^^^^^^^^^^^^^^^         
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 504, in _run                    
+                                               task.result()                    
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"tts": 
+"livekit.agents.inference.stt.STT", "attempt": 2, "streamed": true, "pid": 
+30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/stt/stt.py", line
+317, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+504, in _run
+    task.result()
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:23:04.389 ERROR  livekit.agents     Error in recv_task                   
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:23:04.390 ERROR  livekit.agents     AgentSession is closing due to       
+                                           unrecoverable error                  
+                                           Traceback (most recent call last):   
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 317, in _main_task              
+                                               return await self._run()         
+                                                      ^^^^^^^^^^^^^^^^^         
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 504, in _run                    
+                                               task.result()                    
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 16, in async_fn_logs            
+                                               return await fn(*args,           
+                                           **kwargs)                            
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^…  
+                                             File                               
+                                           "/usr/local/lib/python3.11/dist-pa…  
+                                           line 461, in recv_task               
+                                               raise                            
+                                           APIStatusError(message="LiveKit STT  
+                                           connection closed unexpectedly")     
+                                           livekit.agents._exceptions.APIStat…  
+                                           LiveKit STT connection closed        
+                                           unexpectedly (status_code=-1,        
+                                           request_id=None, body=None,          
+                                           retryable=True)                      
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/stt/stt.py", line
+317, in _main_task
+    return await self._run()
+           ^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+504, in _run
+    task.result()
+  File "/usr/local/lib/python3.11/dist-packages/livekit/agents/utils/log.py", 
+line 16, in async_fn_logs
+    return await fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+"/usr/local/lib/python3.11/dist-packages/livekit/agents/inference/stt.py", line 
+461, in recv_task
+    raise APIStatusError(message="LiveKit STT connection closed unexpectedly")
+livekit.agents._exceptions.APIStatusError: LiveKit STT connection closed 
+unexpectedly (status_code=-1, request_id=None, body=None, retryable=True)
+    21:23:04.391 DEBUG  livekit.agents     input stream detached  
+                                         {"participant": 
+"learner-1768702485011", "source": "SOURCE_UNKNOWN", "accepted_sources": 
+["SOURCE_MICROPHONE"], "pid": 30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": 
+"RM_h4A5LutjWctJ"}
+    21:23:04.392 DEBUG  livekit.agents     session closed  
+                                         {"reason": "error", "error": 
+"type='stt_error' timestamp=1768702984.390102 
+label='livekit.agents.inference.stt.STT' error=APIStatusError('LiveKit STT 
+connection closed unexpectedly') recoverable=False", "pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:25:05.832 INFO   livekit.agents     closing agent session due to         
+                                           participant disconnect (disable via  
+                                           `RoomInputOptions.close_on_disconn…  
+                                         {"room": "deepseek-mla-tutor", 
+"participant": "learner-1768702485011", "reason": "CLIENT_INITIATED", "pid": 
+30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:25:59.888 INFO   livekit.agents     process exiting  
+                                         {"reason": "", "pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:25:59.887 DEBUG  livekit.agents     shutting down job task  
+                                         {"reason": "", "user_initiated": false,
+"pid": 30211, "job_id": "AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}
+    21:25:59.893 DEBUG  livekit.agents     http_session(): closing the          
+                                           httpclient ctx                       
+                                         {"pid": 30211, "job_id": 
+"AJ_AnnJL6KfaBbq", "room_id": "RM_h4A5LutjWctJ"}

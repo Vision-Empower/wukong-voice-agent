@@ -1,0 +1,13 @@
+# LiveKit Agent Configuration
+# This file is used by `lk agent create` for deployment to LiveKit Cloud
+
+[agent]
+name = "wukong-voice-tutor"
+entrypoint = "agent.py"
+
+[build]
+python_version = "3.11"
+
+[runtime]
+# Environment variables are automatically injected from LiveKit Cloud
+# LIVEKIT_URL, LIVEKIT_API_KEY, LIVEKIT_API_SECRET are provided by the platform

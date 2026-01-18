@@ -1,0 +1,8 @@
+# WuKong AI Voice Tutor - Python Dependencies
+# Using LiveKit Agents Framework with LiveKit Inference
+
+# Core LiveKit Agents with required plugins
+livekit-agents[silero,turn-detector]~=1.3
+
+# Environment variable loading
+python-dotenv
