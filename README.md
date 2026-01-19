@@ -40,9 +40,9 @@ Built for **NexHacks Hackathon** - LiveKit Track
    pip install -r requirements.txt
    ```
 
-3. Set up environment variables (already configured in `.env.local`):
+3. Set up environment variables by copying `.env.example` to `.env.local` and filling in your LiveKit credentials:
    ```
-   LIVEKIT_URL=wss://wukong-ai-0w0oasmq.livekit.cloud
+   LIVEKIT_URL=wss://your-project.livekit.cloud
    LIVEKIT_API_KEY=your_api_key
    LIVEKIT_API_SECRET=your_api_secret
    ```
@@ -52,6 +52,11 @@ Built for **NexHacks Hackathon** - LiveKit Track
    WUKONG_STT_MODEL=assemblyai/universal-streaming:en
    WUKONG_LLM_MODEL=openai/gpt-4.1-mini
    WUKONG_TTS_MODEL=cartesia/sonic-3:9626c31c-bec5-4cca-baa8-f8ba9e84c8bc
+   ```
+   
+   Optional greeting override:
+   ```
+   WUKONG_GREETING=Greet the user warmly as the WuKong AI Voice Tutor and ask what they want to learn.
    ```
 
 ### Running the Agent

@@ -67,11 +67,12 @@ User: Why does this matter?
 Assistant: It lets strong models run on cheaper hardware with higher throughput, making AI more accessible.
 """
 
-GREETING_PROMPT = (
+DEFAULT_GREETING_PROMPT = (
     "Greet the user warmly as the WuKong AI Voice Tutor. Introduce yourself "
     "briefly and ask what they would like to learn about DeepSeek MLA or AI "
     "research today. Keep it to 2 or 3 sentences."
 )
+GREETING_PROMPT = _env_setting("WUKONG_GREETING", DEFAULT_GREETING_PROMPT)
 
 
 class WuKongTutor(Agent):
@@ -87,7 +88,7 @@ class WuKongTutor(Agent):
 server = AgentServer()
 
 
-@server.rtc_session()
+@server.rtc_session(agent_name="wukong-voice-tutor")
 async def wukong_tutor(ctx: agents.JobContext):
     """Main agent session handler"""
     
