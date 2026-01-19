@@ -1,10 +1,8 @@
-# LiveKit Agent Configuration
-# This file is used by `lk agent create` for deployment to LiveKit Cloud
-
 [project]
 subdomain = "wukong-ai-0w0oasmq"
 
 [agent]
+id = "CA_7arYAgLkUBPX"
 name = "wukong-voice-tutor-cli"
 entrypoint = "agent.py"
 
